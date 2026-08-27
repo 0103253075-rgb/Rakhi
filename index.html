@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>For My Sister — Happy Raksha Bandhan</title>
+  <meta name="description" content="A digital keepsake and personal celebration of the bond between a brother and his sister.">
+  
+  <!-- Favicon motif -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2235%22 fill=%22%236F302C%22/><circle cx=%2250%22 cy=%2250%22 r=%2222%22 fill=%22%23B89A62%22/><circle cx=%2250%22 cy=%2250%22 r=%2210%22 fill=%22%23FAF6F0%22/></svg>">
+
+  <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans, Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Audio Floating Controller -->
+  <aside class="audio-control-bar" id="audioControlBar" aria-label="Audio controls">
+    <button id="soundToggle" class="sound-toggle-btn" aria-label="Toggle ambient music" title="Toggle peaceful ambient music">
+      <span class="sound-icon-wrapper">
+        <svg class="sound-icon sound-on-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+        </svg>
+        <svg class="sound-icon sound-off-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+          <line x1="23" y1="9" x2="17" y2="15"/>
+          <line x1="17" y1="9" x2="23" y2="15"/>
+        </svg>
+      </span>
+      <span class="sound-label" id="soundLabel">Music: Off</span>
+    </button>
+  </aside>
+
+  <!-- 0. OPENING SCREEN (Interactive Gatefold) -->
+  <section class="gatefold-screen" id="gatefoldScreen" aria-label="Opening Gift Screen">
+    <div class="gatefold-content">
+      <div class="rakhi-motif-mini" aria-hidden="true">
+        <div class="motif-ring outer"></div>
+        <div class="motif-ring mid"></div>
+        <div class="motif-gem"></div>
+      </div>
+      
+      <p class="gatefold-eyebrow">FOR MY SISTER</p>
+      <h1 class="gatefold-title">A little something for you.</h1>
+      
+      <p class="gatefold-subtitle">
+        This Rakhi, I wanted to give you something that couldn’t fit inside a box.
+      </p>
+
+      <div class="gatefold-action">
+        <button id="openSurpriseBtn" class="luxury-button" type="button">
+          <span>Open your Rakhi surprise</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+
+      <p class="microcopy gatefold-microcopy">
+        made with slightly more effort than a WhatsApp message
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN SCROLLING EXPERIENCE CONTAINER -->
+  <main class="main-experience" id="mainExperience">
+    
+    <!-- 1. HERO SECTION -->
+    <header class="hero-section section-padding" id="heroSection">
+      <div class="hero-media-wrapper reveal-item">
+        <div class="hero-image-container">
+          <img 
+            src="assets/rakhi_hero_moment.jpg" 
+            alt="Brother and sister sharing a warm moment during Raksha Bandhan" 
+            class="hero-image"
+            loading="eager"
+          />
+          <div class="hero-gradient-overlay"></div>
+        </div>
+
+        <div class="hero-caption-card reveal-item" data-delay="200">
+          <p class="section-tag">Raksha Bandhan</p>
+          <h2 class="hero-heading">Happy Raksha Bandhan, Didi.</h2>
+          <div class="hero-quote-divider"></div>
+          <p class="hero-subtext">
+            Some people are given to us by life.<br>
+            A sister is one of the people who makes life feel like home.
+          </p>
+        </div>
+      </div>
+
+      <div class="scroll-indicator reveal-item" data-delay="400">
+        <span class="scroll-text">scroll to continue</span>
+        <div class="scroll-line">
+          <div class="scroll-dot"></div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- 2. PERSONAL INTRODUCTION SECTION -->
+    <section class="editorial-section section-padding" id="introSection">
+      <div class="container-narrow">
+        <div class="editorial-header reveal-item">
+          <span class="editorial-numeral">— I —</span>
+          <h2 class="section-heading">You probably don’t hear me say this enough.</h2>
+        </div>
+
+        <div class="letter-prose reveal-item" data-delay="150">
+          <p>
+            I know I don’t always say it.
+          </p>
+          <p>
+            Sometimes brothers are not exactly the best at turning feelings into words.
+          </p>
+          <p class="prose-highlight">
+            But today, on Rakhi, I wanted to take a moment to tell you something I hope you always remember:
+          </p>
+          <blockquote class="poetic-quote">
+            “I’m really, really glad you’re my sister.”
+          </blockquote>
+        </div>
+
+        <div class="section-microcopy-wrapper reveal-item" data-delay="300">
+          <span class="microcopy-badge">yes, I actually made a website for this</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 3. SECTION — THINGS I DON'T SAY ENOUGH -->
+    <section class="cards-section section-padding" id="cardsSection">
+      <div class="container-wide">
+        <div class="section-header-centered reveal-item">
+          <span class="editorial-numeral">— II —</span>
+          <h2 class="section-heading">Things I probably don’t say enough</h2>
+          <p class="section-subheading">A few little truths that don't get spoken often enough.</p>
+        </div>
+
+        <div class="cards-grid">
+          
+          <!-- Card 01 -->
+          <article class="luxury-card reveal-item" data-delay="100">
+            <div class="card-numeral">01</div>
+            <div class="card-body">
+              <h3 class="card-title">I’m proud of you.</h3>
+              <p class="card-text">
+                Not just for the big milestones.<br>
+                For the little things too — the things you do when nobody is watching.
+              </p>
+            </div>
+            <div class="card-accent-line"></div>
+          </article>
+
+          <!-- Card 02 -->
+          <article class="luxury-card reveal-item" data-delay="180">
+            <div class="card-numeral">02</div>
+            <div class="card-body">
+              <h3 class="card-title">You make things feel lighter.</h3>
+              <p class="card-text">
+                Even when the days are noisy, or when you don't even realize you’re doing it.
+              </p>
+            </div>
+            <div class="card-accent-line"></div>
+          </article>
+
+          <!-- Card 03 -->
+          <article class="luxury-card reveal-item" data-delay="260">
+            <div class="card-numeral">03</div>
+            <div class="card-body">
+              <h3 class="card-title">I’ll always be in your corner.</h3>
+              <p class="card-text">
+                No matter how annoying you are.<br>
+                <span class="card-whisper">Yes, even then.</span>
+              </p>
+            </div>
+            <div class="card-accent-line"></div>
+          </article>
+
+          <!-- Card 04 -->
+          <article class="luxury-card reveal-item" data-delay="340">
+            <div class="card-numeral">04</div>
+            <div class="card-body">
+              <h3 class="card-title">You deserve good things.</h3>
+              <p class="card-text">
+                More than you sometimes give yourself credit for. Never forget that.
+              </p>
+            </div>
+            <div class="card-accent-line"></div>
+          </article>
+
+          <!-- Card 05 -->
+          <article class="luxury-card reveal-item" data-delay="420">
+            <div class="card-numeral">05</div>
+            <div class="card-body">
+              <h3 class="card-title">You inspire me quietly.</h3>
+              <p class="card-text">
+                Your kindness, your strength, and the way you keep showing up even on difficult days.
+              </p>
+            </div>
+            <div class="card-accent-line"></div>
+          </article>
+
+          <!-- Card 06 (Humor & Warmth) -->
+          <article class="luxury-card card-special reveal-item" data-delay="500">
+            <div class="card-numeral">06</div>
+            <div class="card-body">
+              <h3 class="card-title">And yes...</h3>
+              <p class="card-text">
+                You’re stuck with me.<br>
+                <strong>There is no return policy.</strong>
+              </p>
+            </div>
+            <div class="card-accent-line"></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 4. RAKHI MOMENT SECTION -->
+    <section class="rakhi-moment-section section-padding" id="rakhiMomentSection">
+      <div class="container-medium">
+        <div class="moment-layout">
+          
+          <div class="moment-media reveal-item">
+            <div class="moment-frame">
+              <img 
+                src="assets/rakhi_detail_closeup.jpg" 
+                alt="Close-up of sister tying the Rakhi thread around brother's wrist" 
+                class="moment-image"
+                loading="lazy"
+              />
+              <div class="image-inner-border"></div>
+            </div>
+            <p class="image-caption">The sacred thread of love & lifelong protection</p>
+          </div>
+
+          <div class="moment-text-content reveal-item" data-delay="200">
+            <span class="editorial-numeral">— III —</span>
+            <h2 class="section-heading">One thread. A lifetime of memories.</h2>
+            
+            <div class="moment-prose">
+              <p>A rakhi is a tiny thing.</p>
+              <p class="emphasis-line">Just a thread.</p>
+              <p>
+                But somehow, it carries years of memories, arguments over remote controls, shared laughter, annoying each other, looking out for each other, and growing up together.
+              </p>
+              <p class="moment-conclusion">
+                And that’s what makes it special.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 5. INTERACTIVE RAKHI DETAIL -->
+    <section class="interactive-rakhi-section section-padding" id="interactiveRakhiSection">
+      <div class="container-narrow">
+        <div class="rakhi-interactive-wrapper reveal-item">
+          
+          <p class="subtle-prompt">A promise, in its simplest form.</p>
+          
+          <!-- Interactive Rakhi Motif Centerpiece -->
+          <div class="rakhi-interactive-trigger" id="rakhiTrigger" role="button" tabindex="0" aria-label="Tap to unlock brother's promise">
+            <div class="rakhi-thread-horizontal left"></div>
+            
+            <div class="rakhi-ornament">
+              <div class="rakhi-pulse-ring"></div>
+              <div class="rakhi-filigree">
+                <svg viewBox="0 0 100 100" class="rakhi-svg">
+                  <circle cx="50" cy="50" r="45" stroke="#B89A62" stroke-width="1.5" fill="none" stroke-dasharray="3 3" />
+                  <circle cx="50" cy="50" r="36" stroke="#A85C45" stroke-width="1.5" fill="none" />
+                  <circle cx="50" cy="50" r="26" fill="#6F302C" />
+                  <circle cx="50" cy="50" r="16" fill="#B89A62" />
+                  <circle cx="50" cy="50" r="6" fill="#FAF6F0" />
+                </svg>
+              </div>
+              <div class="rakhi-tap-hint">
+                <span class="tap-text">Tap the Rakhi</span>
+              </div>
+            </div>
+
+            <div class="rakhi-thread-horizontal right"></div>
+          </div>
+
+          <!-- Revealed Secret Promise -->
+          <div class="rakhi-hidden-message" id="rakhiHiddenMessage" aria-live="polite">
+            <div class="message-ornament-top">✦</div>
+            <div class="revealed-lines">
+              <p>Wherever life takes us,</p>
+              <p>whatever changes,</p>
+              <p>however much older we get —</p>
+              <p class="promise-highlight">I’ll always be your brother.</p>
+            </div>
+            <div class="message-ornament-bottom">✦</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 6. FOR YOUR YEAR AHEAD SECTION -->
+    <section class="wishes-section section-padding" id="wishesSection">
+      <div class="container-narrow">
+        <div class="section-header-centered reveal-item">
+          <span class="editorial-numeral">— IV —</span>
+          <h2 class="section-heading">For the year ahead...</h2>
+          <p class="wishes-opening">I hope you...</p>
+        </div>
+
+        <div class="wishes-timeline">
+          
+          <div class="wish-item reveal-item" data-delay="100">
+            <span class="wish-bullet">✦</span>
+            <p class="wish-text">find more reasons to laugh.</p>
+          </div>
+
+          <div class="wish-item reveal-item" data-delay="180">
+            <span class="wish-bullet">✦</span>
+            <p class="wish-text">choose yourself without feeling guilty.</p>
+          </div>
+
+          <div class="wish-item reveal-item" data-delay="260">
+            <span class="wish-bullet">✦</span>
+            <p class="wish-text">meet people who appreciate you for exactly who you are.</p>
+          </div>
+
+          <div class="wish-item reveal-item" data-delay="340">
+            <span class="wish-bullet">✦</span>
+            <p class="wish-text">have the courage to chase the things you really want.</p>
+          </div>
+
+          <div class="wish-item reveal-item" data-delay="420">
+            <span class="wish-bullet">✦</span>
+            <p class="wish-text">never forget how capable you are.</p>
+          </div>
+
+          <div class="wish-item reveal-item" data-delay="500">
+            <span class="wish-bullet">✦</span>
+            <p class="wish-text">have more peaceful days than stressful ones.</p>
+          </div>
+
+          <div class="wish-item reveal-item" data-delay="580">
+            <span class="wish-bullet">✦</span>
+            <p class="wish-text">and always have someone to call when life gets a little too much.</p>
+          </div>
+
+        </div>
+
+        <div class="wishes-anchor reveal-item" data-delay="650">
+          <div class="anchor-line"></div>
+          <p class="anchor-text">I’ll be that person.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 7. PLAYFUL SIBLING MOMENT -->
+    <section class="disclaimer-section section-padding" id="disclaimerSection">
+      <div class="container-narrow">
+        <div class="disclaimer-card reveal-item">
+          <div class="stamp-badge">SIBLING CLAUSE</div>
+          <span class="editorial-numeral">— V —</span>
+          <h2 class="disclaimer-tag">One important disclaimer.</h2>
+          <p class="disclaimer-headline">I am still going to annoy you.</p>
+          
+          <div class="disclaimer-divider"></div>
+          
+          <p class="disclaimer-body">
+            This website does not constitute a legally binding promise to stop stealing your food, making fun of you, or bothering you for absolutely no reason.
+          </p>
+
+          <p class="disclaimer-signoff">
+            Happy Rakhi <span class="subtle-heart">❤️</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 8. FINAL LETTER SECTION (Dark Luxury Climax) -->
+    <section class="final-letter-section section-padding" id="finalLetterSection">
+      <div class="letter-bg-glow"></div>
+      <div class="container-narrow letter-container">
+        
+        <div class="letter-header-wrap reveal-item">
+          <span class="editorial-numeral light">— VI —</span>
+          <h2 class="letter-top-heading">One last thing.</h2>
+        </div>
+
+        <div class="parchment-letter reveal-item" data-delay="200">
+          <div class="letter-inner-border"></div>
+          
+          <div class="letter-content-flow">
+            <p class="letter-salutation">Dear Didi,</p>
+
+            <p>
+              I could have just sent you a “Happy Rakhi ❤️” message like I usually do.
+            </p>
+
+            <p>
+              But you deserve more than a message that disappears into a chat.
+            </p>
+
+            <p>
+              So I made you this little corner of the internet.
+            </p>
+
+            <p>
+              Not because I needed a reason to tell you that I love you, but because sometimes the things that matter most deserve to be said properly.
+            </p>
+
+            <p>
+              Thank you for being my sister.
+            </p>
+
+            <p>
+              Thank you for all the little moments, the conversations, the laughs, the arguments, the advice, and all the memories that I probably don’t appreciate enough while they’re happening.
+            </p>
+
+            <p>
+              I don’t know exactly where life is going to take either of us.
+            </p>
+
+            <p>
+              But wherever we end up, I hope you always know that you’ll have a brother cheering for you, annoying you, worrying about you, and standing beside you.
+            </p>
+
+            <p class="letter-forever-word">Always.</p>
+
+            <div class="letter-signoff-wrap">
+              <p class="letter-closing-wish">Happy Raksha Bandhan, Didi.</p>
+              <p class="letter-signature">— Your annoying brother</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 9. FINAL PHOTOGRAPH & CLOSING -->
+    <section class="closing-section section-padding" id="closingSection">
+      <div class="container-medium">
+        
+        <div class="closing-portrait-wrap reveal-item">
+          <div class="closing-portrait-frame">
+            <img 
+              src="assets/rakhi_portrait_together.jpg" 
+              alt="Portrait of brother and sister smiling happily together" 
+              class="closing-portrait-image"
+              loading="lazy"
+            />
+            <div class="portrait-warm-overlay"></div>
+          </div>
+        </div>
+
+        <div class="closing-statement reveal-item" data-delay="200">
+          <p class="closing-line-1">Some bonds don’t need explaining.</p>
+          <h2 class="closing-line-2">They just need celebrating.</h2>
+          <p class="closing-wish">Happy Raksha Bandhan <span class="heart-pulse">❤️</span></p>
+        </div>
+
+        <div class="closing-actions reveal-item" data-delay="350">
+          <button id="replayBtn" class="replay-button" type="button">
+            <span>Replay our little story</span>
+            <span class="replay-arrow">↗</span>
+          </button>
+          <p class="closing-footnote">worth the effort.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
